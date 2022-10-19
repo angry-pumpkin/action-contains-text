@@ -1,0 +1,17 @@
+name: 'Extract Delimetered Value'
+description: 'Extracts which unit tests to be run based on a PR request body.'
+author: 'Peter Guest'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+inputs:
+  input-string:
+    description: "The string to be searched within."
+    required: true
+  input-pattern:
+    description: "RegExp pattern to use."
+    required: true
+outputs:
+  is-matched:
+    description: 'Indicate if we found the delimiters and got a value.'
+
