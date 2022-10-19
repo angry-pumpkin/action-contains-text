@@ -2824,9 +2824,15 @@ const main = async () => {
     try {
 
         const inputValue = core.getInput('input-value');
+        console.log('inputValue :'+inputValue);
+
         const searchValue = core.getInput('search-value');
+        console.log('searchValue :'+searchValue);
+
         let isMatched = false;
         let matchValues = searchValue.split("|");
+
+        console.log('matchValues :'+matchValues);
 
         for (let i = 0; i < matchValues.length; i++) {
 
@@ -2835,6 +2841,8 @@ const main = async () => {
                 break;
             }
         }
+
+        console.log('isMatched :'+isMatched);
 
         core.setOutput("is-matched", isMatched);
 
